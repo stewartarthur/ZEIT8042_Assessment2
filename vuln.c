@@ -18,12 +18,14 @@ void data_input(){
     char age[12];
     printf("Enter your first name: ");
     fgets(firstname, sizeof(firstname), stdin);
+    firstname[strcspn(firstname, "\n")] = '\0';
     printf("Enter your last name: ");
     fgets(lastname, sizeof(lastname), stdin);
+    lastname[strcspn(lastname, "\n")] = '\0';
     printf("Enter your age: ");
     gets(age);
 
-    //printf("You entered: %s\n", buf);
+    printf("Thankyou, %s %s; age %s",firstname, lastname, age);
 }
 
 int main(){
