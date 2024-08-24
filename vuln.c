@@ -13,9 +13,17 @@ void secret(){
 }
 
 void data_input(){
-    char buf[12];
-    gets(buf);
-    printf("You entered: %s\n", buf);
+    char firstname[64];
+    char lastname[64];
+    char age[12];
+    printf("Enter your first name: ");
+    fgets(firstname, sizeof(firstname), stdin);
+    printf("Enter your last name: ");
+    fgets(lastname, sizeof(lastname), stdin);
+    printf("Enter your age: ");
+    gets(age);
+
+    //printf("You entered: %s\n", buf);
 }
 
 int main(){
