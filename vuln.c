@@ -40,12 +40,6 @@ void data_input(){
 }
 
 int main(){
-    // online example - testing leaking addresses:
-    // void *self = dlopen(NULL, RTLD_NOW);
-    // printf("stack   : %p\n", &argc);
-    // printf("system(): %p\n", dlsym(self, "system"));
-    // printf("gets(): %p\n", dlsym(self, "gets"));
-
     data_input();
     return 0;
 }
