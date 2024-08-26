@@ -6,12 +6,6 @@
 // In the interest of focusing on the exploit and bypassing security
 // features, perhaps remove the 2 x safe inputs and leave as a single bad?
 
-// 260824 - Removed everything but basic vulnerability.
-
-
-// For future refinement/enhancement, consider including less vulnerable parts
-// for more complex program and higher marks?
-
 #include <stdio.h>
 #include <string.h>
 //#include <stdlib.h>   //needed?
