@@ -1,27 +1,27 @@
-// Vulnerable program for Assessment 2
-
-// NX Enabled
-// 64bit compiled
-
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
 
-//Unused function
-void secret(){
-    printf("You found the secret!\n");
+void add_gadgets() {
+    asm("pop %rdi; ret;");
 }
 
+// void secret(char *pass) {
+//     printf("Password is: %s\n",pass);
+//     char *str = "Test";
+//     write(1, str, strlen(str));
+// }
+
 void data_input(){
-    char language[50];
+    char buf[64];
     printf("buffer:");
     fflush(stdout);
-    gets(language);
-
-    //printf("Thankyou, %s %s; age %s",firstname, lastname, age);  //modify?
-    //printf("You entered: %s",language);
+    gets(buf);
+    //secret(buf);
 }
 
 int main(){
+  add_gadgets();
     data_input();
     return 0;
 }
