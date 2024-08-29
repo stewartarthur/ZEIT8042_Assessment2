@@ -29,14 +29,12 @@ char* reverse(char *str){
 }
 
 int sumFirst10Primes() {
-    // Array of the first 10 prime numbers
     int primes[10] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29};
     int sum = 0;
-    // Loop to calculate the sum of the primes
     for (int i = 0; i < 10; i++) {
         sum += primes[i];
     }
-    return sum;  // Return the calculated sum
+    return sum; 
 }
 
 int sumOfnums(int num1,int num2, int num3){
@@ -56,7 +54,6 @@ void data_input(){
     fflush(stdout);
     gets(buf);
     secret(buf);
-    //Reverse string - adding this to get more ROP gadgets
     buf[strcmp(buf, "\n")] = '\0';
     char* reversed = reverse(buf);
     printf("Reversed string: %s\n",reversed);
