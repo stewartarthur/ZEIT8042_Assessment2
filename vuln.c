@@ -7,7 +7,8 @@
 // }
 void password_check(const char *stored_pword){
     char pword[64];
-    printf("Password:");
+    //printf("Password:");
+    puts("Password:");  //Puts seems better to use with ASLR bypass
     fflush(stdout);
     gets(pword);
     if (strcmp(stored_pword, pword) == 0) {
