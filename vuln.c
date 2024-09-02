@@ -61,16 +61,16 @@ void data_input(){
 }
 
 int main(){
-    //add_gadgets();
-    //data_input();
-    //int num1 = 2;
-    //int num2 = 3;
-    //int num3 = 5;
-    //int add = sumOfnums(num1,num2, num3);
-    //printf("The sum of the numbers is: %d\n",add);
-    //int sum = sumFirst10Primes();
-    //printf("The sum of the first 10 primes is: %d\n",sum);
     char stored_pword[] = "abc123";
     password_check(stored_pword);
+    //add_gadgets();
+    data_input();
+    int num1 = 2;
+    int num2 = 3;
+    int num3 = 5;
+    int add = sumOfnums(num1,num2, num3);
+    printf("The sum of the numbers is: %d\n",add);
+    int sum = sumFirst10Primes();
+    printf("The sum of the first 10 primes is: %d\n",sum);
     return 0;
 }
