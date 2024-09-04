@@ -9,6 +9,8 @@ void password_check(const char *stored_pword){
     char pword[64];
     //printf("Password:");
     puts("Password:");  //Puts seems better to use with ASLR bypass
+    //printf(stored_pword);     //Testing Canary Bypass
+    //printf("\n");
     fflush(stdout);
     gets(pword);
     if (strcmp(stored_pword, pword) == 0) {
@@ -64,13 +66,13 @@ int main(){
     char stored_pword[] = "abc123";
     password_check(stored_pword);
     //add_gadgets();
-    data_input();
-    int num1 = 2;
-    int num2 = 3;
-    int num3 = 5;
-    int add = sumOfnums(num1,num2, num3);
-    printf("The sum of the numbers is: %d\n",add);
-    int sum = sumFirst10Primes();
-    printf("The sum of the first 10 primes is: %d\n",sum);
+    //data_input();
+    //int num1 = 2;
+    //int num2 = 3;
+    //int num3 = 5;
+    //int add = sumOfnums(num1,num2, num3);
+    //printf("The sum of the numbers is: %d\n",add);
+    //int sum = sumFirst10Primes();
+    //printf("The sum of the first 10 primes is: %d\n",sum);
     return 0;
 }
