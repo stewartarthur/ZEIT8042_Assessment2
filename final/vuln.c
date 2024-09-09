@@ -1,21 +1,20 @@
 #include <stdio.h>
 #include <string.h>
-//#define STDIN 0
 
 // TRY MAKE THESE DO SOMETHING, Reverse, count etc
 
-// program stage one, leak the canary to continue the exploit
+// program stage one, leak the canary to continue the exploit.
 void canaryLeak() {
     char buf[64];
     scanf("%s", buf);
     printf(buf);
 }
 
+// program stage two, execute ROP Chain attack and gain Shell.
 void getShell() {
     char buf[64];
     scanf("%s", buf);
     printf(buf);
-    //read(STDIN, buf, 256);
 }
 
 int main(int argc, char* argv[]) {
